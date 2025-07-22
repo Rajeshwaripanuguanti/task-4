@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Task Implementation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>ApexPlanet</h1>
+    <ul>
+      <li onclick="showPage('portfolio')">Portfolio</li>
+      <li onclick="showPage('todo')">To-Do App</li>
+      <li onclick="showPage('products')">Products</li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="portfolio" class="page">
+      <h2>Personal Portfolio</h2>
+      <p>Hi, I'm a Web Developer! Here's my work:</p>
+      <ul>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </section>
+
+    <section id="todo" class="page hidden">
+      <h2>To-Do / Notes</h2>
+      <input type="text" id="todoInput" placeholder="Write a task..." />
+      <button onclick="addTodo()">Add</button>
+      <ul id="todoList"></ul>
+    </section>
+
+    <section id="products" class="page hidden">
+      <h2>Product Listing</h2>
+      <select onchange="filterProducts(this.value)">
+        <option value="all">All</option>
+        <option value="tech">Tech</option>
+        <option value="fashion">Fashion</option>
+      </select>
+      <div id="productList" class="products"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
